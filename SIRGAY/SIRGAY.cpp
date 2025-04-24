@@ -17,7 +17,7 @@
 //
 //	
 //		std::cout << "¬ведите число\n 1 камень\n 2 ножницы\n 3 бумага\n" << std::endl;
-//		std::cin >> user;
+//		std::cin >> user;//
 //		if (user == 1|| user == 2||  user == 3 ) {
 //		 
 //			if (user == 2 && bot == 1 || user == 3 && bot == 2 || user == 1 && bot == 3) {
