@@ -1,61 +1,59 @@
-// SIRGAY.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-//#include <iostream>
-//
-//
-//int main()
-//{
-//	setlocale(LC_ALL, "");
-//	srand(time(NULL));
-//
-//	
-//	
-//	for (int a = 0; a < 3;){
-//	int user, bot = 1 + rand() % 3;
-//		
-//
-//	
-//		std::cout << "Введите число\n 1 камень\n 2 ножницы\n 3 бумага\n" << std::endl;
-//		std::cin >> user;//
-//		if (user == 1|| user == 2||  user == 3 ) {
-//		 
-//			if (user == 2 && bot == 1 || user == 3 && bot == 2 || user == 1 && bot == 3) {
-//				std::cout << "Ты Проиграл\n";
-//
-//			}
-//			else if (user == bot) {
-//				std::cout << "Ничья\n";
-//
-//
-//
-//
-//			}
-//			else {
-//				std::cout << "Выиграл\n";
-//				a++;
-//				std::cout << bot;
-//
-//			}
-//		}
-//		else {
-//	
-//			std::cout << "ты дурной?\n";
-//		}
-//
-//	}
-//
  
+
 #include <iostream>
+#include <string>
+#include <Windows.h>
 
 
+
+void game() {
+
+	
+		std::string bot[3]{"Капмень", "Ножницы", "Дубмага"};
+		
+		std::string user;
+	
+	for (int a = 0; a < 3;) {
+		
+		int r = 1 + rand() % 3;
+		
+	
+		std::cout << "камень\nножницы\nбумага\n" << std::endl;
+		std::cin >> user;
+		if (user == "Капмень" || user == "Ножницы" ||  user == "Дубмага" ) {
+		 
+			if (user == "Ножницы" && bot[r] == "Капмень" || user =="Дубмага" && bot[r] == "Ножницы" || user =="Капмень" && bot[r] == "Дубмага") {
+				std::cout << "Ты Проиграл\n";
+
+			}
+			else if (user == bot[r]) {
+				std::cout << "Ничья\n";
+			}
+			else {
+				std::cout << "Выиграл\n";
+				a++;
+			}
+		}
+		else {
+	
+			std::cout << "ты дурной?\n";
+		}
+		
+	}
+
+}
 int main()
 {
-
+	setlocale(LC_ALL, "");
+	SetConsoleCP(1251);
+	srand(time(NULL));
+	game();
 
 
 
 }
+
+
 
 
 
